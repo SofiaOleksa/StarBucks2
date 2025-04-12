@@ -116,23 +116,64 @@ a:hover {
 .btn-row {
   display: flex;
   gap: 16px;
+  align-items: flex-end;
 }
 
 .btn {
-  border: 1px solid #237249;
-  padding: 21px 52px;
+  padding: 23px 53px;
   border-radius: 45px;
   display: inline-block;
   transition: 0.3s;
   font-size: 24px;
+  position: relative;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  background: url(./assets/img/template-decoration-green.png) center/contain no-repeat;
+  transition: 0.3s;
+  z-index: -1;
 }
 .btn:hover {
-  opacity: 0.9;
+  color: #fff;
+}
+.btn:hover::before {
+  width: 350px;
+  height: 350px;
 }
 .btn.btn-primary {
   background-image: linear-gradient(204deg, #237249 0%, #288a53 29.33%, #2b9859 45.67%, #2ea55e 61.06%, #35c66b 100%);
   font-weight: 600;
   color: #fff;
+}
+.btn.btn-secondary {
+  background: #121517;
+  padding: 20.5px 53px;
+}
+.btn.btn-secondary::before {
+  background: url(./assets/img/template-decoration-white.png) center/contain no-repeat;
+}
+.btn.btn-secondary::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  border-radius: 45px;
+  background-image: linear-gradient(173deg, #dadada 0%, rgba(218, 218, 218, 0) 100%);
+}
+.btn.btn-sm {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 17px 39px;
 }
 
 .btn-arrow {
@@ -140,6 +181,7 @@ a:hover {
   --icon-size: 35px;
   --border-radius: 29px;
   --border-width: 3px;
+  padding: 25px;
   width: calc(var(--size) - var(--border-width) * 2);
   height: calc(var(--size) - var(--border-width) * 2);
   border-radius: var(--border-radius);
@@ -149,7 +191,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.btn-arrow::before {
+.btn-arrow::after {
   content: "";
   position: absolute;
   border-radius: calc(var(--border-radius) + 1px);
@@ -159,6 +201,8 @@ a:hover {
   left: 50%;
   background-image: linear-gradient(204deg, #237249 0%, #288a53 29.33%, #2b9859 45.67%, #2ea55e 61.06%, #35c66b 100%);
   z-index: -1;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
