@@ -224,6 +224,44 @@ a:hover {
   background-image: linear-gradient(204deg, #237249 0%, #288a53 29.33%, #2b9859 45.67%, #2ea55e 61.06%, #35c66b 100%);
 }
 
+.label {
+  --size: 184px;
+  --this-size: calc(var(--size) - 24px);
+  width: var(--this-size);
+  height: var(--this-size);
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: -4.56px 15.52px 26.48px rgba(20, 62, 40, 0.4588235294);
+  position: relative;
+}
+.label::before {
+  content: var(--content);
+  background: url(./assets/img/label.png) center/contain no-repeat;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+.label.label_text-large {
+  font-size: 62px;
+}
+.label.label_sm {
+  --size: 133px;
+  font-size: 32px;
+}
+
 .icon-svg {
   height: var(--icon-size);
   width: var(--icon-size);
@@ -364,12 +402,39 @@ use {
   transform: rotate(90deg) translate(-16px, 0px);
 }
 
+.banner .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+}
 .banner .tamplate-title h1 {
   display: flex;
   flex-direction: column;
 }
 .banner .btn-row {
   margin-bottom: 50px;
+}
+.banner-advantages {
+  display: flex;
+  gap: 46px;
+}
+.banner-advantage {
+  width: 126px;
+}
+.banner-advantage__title {
+  font-size: 62px;
+}
+.banner-advantage__description {
+  font-size: 20px;
+}
+.banner-image {
+  max-width: 472px;
+  position: relative;
+}
+.banner-image .label {
+  position: absolute;
+  top: 12px;
+  right: 24px;
 }
 
 .footer {
