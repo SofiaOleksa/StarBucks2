@@ -121,6 +121,7 @@ a:hover {
 }
 
 .btn {
+  --icon-size: 28px;
   padding: 23px 53px;
   border-radius: 45px;
   display: inline-block;
@@ -264,6 +265,8 @@ a:hover {
 }
 
 .icon-svg {
+  vertical-align: middle;
+  top: -4px;
   height: var(--icon-size);
   width: var(--icon-size);
 }
@@ -498,6 +501,55 @@ use {
   color: #282A2C;
   font-weight: 400;
   line-height: 163.5%;
+}
+
+.we-make__video {
+  position: relative;
+}
+.we-make__video .btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+
+.template-content {
+  --translate-y: 36px;
+  --translate-x: 45px;
+  padding: var(--translate-y);
+  display: flex;
+  gap: var(--translate-x);
+  justify-content: space-between;
+}
+.template-content__img-box {
+  position: relative;
+  max-width: 465px;
+  width: 100%;
+}
+.template-content__img-box img {
+  transform: translate(var(--translate-x), calc(var(--translate-y) * -1));
+  mask: url(./assets/img/we-make___bg.svg) no-repeat;
+}
+.template-content__img-box .label {
+  position: absolute;
+  top: -35px;
+  right: -15px;
+  z-index: 1;
+}
+.template-content__img-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #237249;
+  top: 0px;
+  right: 0px;
+  mask: url(./assets/img/we-make___bg.svg) no-repeat;
+}
+.template-content__info-box {
+  max-width: 457px;
+  width: 100%;
 }
 
 .footer {
