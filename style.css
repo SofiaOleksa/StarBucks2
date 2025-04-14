@@ -827,8 +827,8 @@ use {
   h6, .h6 {
     font-size: 16px;
   }
-  .btn,
-  .btn.btn-secondary {
+  .btn:not(.btn-arrow),
+  .btn.btn-secondary:not(.btn-arrow) {
     font-size: 16px;
     padding: 15.5px 35px;
   }
