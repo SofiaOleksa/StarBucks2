@@ -686,6 +686,10 @@ use {
   overflow: auto;
 }
 
+.product-slider {
+  background-color: aqua;
+}
+
 .footer {
   position: relative;
   padding: 40px 0;
