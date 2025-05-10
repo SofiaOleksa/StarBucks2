@@ -32,6 +32,26 @@ const swiper = new Swiper('.swiper-product', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+    
+    breakpoints: {
+    
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 48,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+        },
+        1125: {
+            slidesPerView: 3,
+            spaceBetween: 48,
+        },
+        
+        1500: {
+            slidesPerView: 4,
+            spaceBetween: 48,
+        }
+    }
    
   });
