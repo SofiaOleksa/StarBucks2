@@ -761,6 +761,35 @@ use {
   transform: rotate(-90deg);
 }
 
+.footer:before {
+  z-index: -1;
+}
+
+.btn::before {
+  z-index: -1;
+}
+
+.btn.btn-secondary::after {
+  z-index: -1;
+}
+
+.btn-arrow:after, .btn-volume:after, .swiper-button-prev:after,
+.swiper-button-next:after {
+  z-index: -1;
+}
+
+.template-content__img-box .label {
+  z-index: 1;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.header {
+  z-index: 2;
+}
+
 .footer {
   position: relative;
   padding: 40px 0;
