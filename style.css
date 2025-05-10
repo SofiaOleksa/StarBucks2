@@ -686,8 +686,9 @@ use {
   overflow: auto;
 }
 
-.product-slider {
-  background-color: aqua;
+.swiper {
+  width: 1200px;
+  height: 300px;
 }
 
 .footer {
