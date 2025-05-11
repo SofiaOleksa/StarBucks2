@@ -12,6 +12,35 @@ Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, feat
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+.footer:before {
+  z-index: -1;
+}
+
+.btn::before {
+  z-index: -1;
+}
+
+.btn.btn-secondary::after {
+  z-index: -1;
+}
+
+.btn-arrow:after, .swiper-button-prev:after,
+.swiper-button-next:after, .btn-volume:after {
+  z-index: -1;
+}
+
+.template-content__img-box .label {
+  z-index: 1;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.header {
+  z-index: 2;
+}
+
 html {
   font-size: 16px;
   font-family: "Montserrat";
@@ -761,33 +790,46 @@ use {
   transform: rotate(-90deg);
 }
 
-.footer:before {
-  z-index: -1;
+.events-list {
+  --gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(var(--gap/2) * -1);
+  background-color: aqua;
 }
 
-.btn::before {
-  z-index: -1;
+.event {
+  width: 100%;
+  border-radius: 30px;
+  min-height: 260px;
+  background: center/cover no-repeat;
+  padding: 44px 24px 26px;
+  margin: 0 calc(var(--gap) / 2) var(--gap);
+}
+.event__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 44px;
 }
 
-.btn.btn-secondary::after {
-  z-index: -1;
+.event:nth-child(5n+1) {
+  max-width: calc(50% - var(--gap));
 }
 
-.btn-arrow:after, .btn-volume:after, .swiper-button-prev:after,
-.swiper-button-next:after {
-  z-index: -1;
+.event:nth-child(5n+2) {
+  max-width: calc(50% - var(--gap));
 }
 
-.template-content__img-box .label {
-  z-index: 1;
+.event:nth-child(5n+3) {
+  max-width: calc(33.33% - var(--gap));
 }
 
-.modal {
-  z-index: 2;
+.event:nth-child(5n+4) {
+  max-width: calc(33.33% - var(--gap));
 }
 
-.header {
-  z-index: 2;
+.event:nth-child(5n+5) {
+  max-width: calc(33.33% - var(--gap));
 }
 
 .footer {
