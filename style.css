@@ -598,6 +598,31 @@ use {
   right: 0px;
   mask: url(./assets/img/we-make___bg.svg) no-repeat;
 }
+.template-content__img-box-reflection {
+  position: relative;
+  max-width: 465px;
+  width: 100%;
+  padding: 35px;
+}
+.template-content__img-box-reflection img {
+  transform: translate(var(--translate-x), calc(var(--translate-y) * -1));
+  mask: url(./assets/img/we-make___clip-right.svg) no-repeat;
+}
+.template-content__img-box-reflection .label {
+  position: absolute;
+  top: -35px;
+  z-index: 1;
+}
+.template-content__img-box-reflection::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #237249;
+  top: 27px;
+  right: -114px;
+  mask: url(./assets/img/we-make___clip-right.svg) no-repeat;
+}
 .template-content__info-box {
   max-width: 457px;
   width: 100%;
@@ -811,6 +836,20 @@ use {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 44px;
+}
+
+.our-contacts {
+  margin-bottom: 64px;
+}
+
+.contact__icon {
+  margin-right: 20px;
+}
+
+.contact-item {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
 }
 
 .footer {
