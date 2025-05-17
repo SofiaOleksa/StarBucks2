@@ -46,6 +46,7 @@ html {
   font-family: "Montserrat";
   scroll-behavior: smooth;
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 0px;
